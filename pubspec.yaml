@@ -1,0 +1,51 @@
+name: flutterapp5
+description: A new Flutter application.
+
+ for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - images/中トトロ.jpg
+    - images/甲_大樹.jpg
+    - images/乙_草花.jpg
+    - images/甲_大樹_2.jpg
+    - images/丁_キャンドル.jpg
+    - images/丁_燃える炎.jpg
+    - images/丙_太陽.jpg
+    - images/丙_朝日.jpg
+    - images/乙_からみつく.jpg
+    - images/乙_イラスト１.jpg
+    - images/壬_支流.jpg
+    - images/壬_海.jpg
+    - images/己_畑土.jpg
+    - images/己_陶芸.jpg
+    - images/庚_剣.jpg
+    - images/庚_鍛える.jpg
+    - images/戊_岩山.jpg
+    - images/戊_石垣.jpg
+    - images/甲_木陰.jpg
+    - images/癸_潤う.jpg
+    - images/癸_雲雨.jpg
+    - images/辛_宝石.jpg
+    - images/辛_王冠.jpg
+    - images/チャン_1.jpg
+
+

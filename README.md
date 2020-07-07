@@ -1,17 +1,20 @@
-# flutterapp5
+# chan_no_sanchusuimei　チャンの三柱推命
 
-A new Flutter application.
+ver_1.1   2020.07.07  GITHubにアップしました。
 
-## Getting Started
+岡照浩が初めて Flutter で作成したアプリケーションです。
+2020.6.22 Flutter の開発環境をインストールしてから、主に「KBOYのFlutter大学」の
+YouTubeを見ながら、作りました。
 
-This project is a starting point for a Flutter application.
+AndroidStudio　の操作
+画面に文字や画像の配置の仕方
+スクロールする画面の作り方
+画面遷移の仕方
+を学習しました。
 
-A few resources to get you started if this is your first Flutter project:
+学んだ内容をもとに、四柱推命の日干ボタンを押すと「甲」から「癸」までの１０種類の日干に応じた
+性格の特徴を知ることができます。
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+今後、生年月日を入力することで、万年暦から日干を計算し、自動で日干に応じた性格を表示するように
+する予定です。
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# chan_no_sanchusuimei" 
