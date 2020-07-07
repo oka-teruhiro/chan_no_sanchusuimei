@@ -23,10 +23,8 @@ flutter:
 
   uses-material-design: true
   assets:
-    - images/中トトロ.jpg
     - images/甲_大樹.jpg
-    - images/乙_草花.jpg
-    - images/甲_大樹_2.jpg
+    - images/甲_木陰.jpg
     - images/丁_キャンドル.jpg
     - images/丁_燃える炎.jpg
     - images/丙_太陽.jpg
@@ -41,7 +39,6 @@ flutter:
     - images/庚_鍛える.jpg
     - images/戊_岩山.jpg
     - images/戊_石垣.jpg
-    - images/甲_木陰.jpg
     - images/癸_潤う.jpg
     - images/癸_雲雨.jpg
     - images/辛_宝石.jpg
