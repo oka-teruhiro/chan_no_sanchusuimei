@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'nikka_tsutinoe.dart';
 import 'nikkan_hinoe.dart';
 import 'nikkan_hinoto.dart';
+import 'nikkan_input.dart';
 import 'nikkan_kanoe.dart';
 import 'nikkan_kanoto.dart';
 import 'nikkan_kinoe.dart';
@@ -12,7 +13,6 @@ import 'nikkan_kinoto.dart';
 import 'nikkan_mizunoe.dart';
 import 'nikkan_mizunoto.dart';
 import 'nikkan_tsutinoto.dart';
-
 
 void main() {
   runApp(MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-         primarySwatch: Colors.blue,
+        primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
@@ -41,7 +41,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   int _counter = 0;
 
   void _incrementCounter() {
@@ -62,16 +61,11 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start, // <= 今回のターゲット
           children: <Widget>[
-
-
-            Image.asset(
-                'images/チャン_1.jpg'
-            ),
+            Image.asset('images/チャン_1.jpg'),
             Padding(
               padding: const EdgeInsets.all(32.0),
               child: Text('あなたの日干はなんですか？？'),
             ),
-
             Container(
               width: double.infinity,
               height: 280,
@@ -79,7 +73,6 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-
                   Container(
                     width: 150,
                     height: 300,
@@ -91,10 +84,10 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Text('甲'),
                           onPressed: () async {
                             final result = await Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => NikkanKinoe(),
-                              )
-                            );
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => NikkanKinoe(),
+                                ));
                             text = result;
                             print(text);
                           },
@@ -104,9 +97,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           onPressed: () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => NikkanHinoe(),
-                                )
-                            );
+                                MaterialPageRoute(
+                                  builder: (context) => NikkanHinoe(),
+                                ));
                           },
                         ),
                         RaisedButton(
@@ -114,9 +107,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           onPressed: () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => NikkanTsutinoe(),
-                                )
-                            );
+                                MaterialPageRoute(
+                                  builder: (context) => NikkanTsutinoe(),
+                                ));
                           },
                         ),
                         RaisedButton(
@@ -124,9 +117,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           onPressed: () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => NikkanKanoe(),
-                                )
-                            );
+                                MaterialPageRoute(
+                                  builder: (context) => NikkanKanoe(),
+                                ));
                           },
                         ),
                         RaisedButton(
@@ -134,17 +127,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           onPressed: () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => NikkanMizunoe(),
-                                )
-                            );
+                                MaterialPageRoute(
+                                  builder: (context) => NikkanMizunoe(),
+                                ));
                           },
                         ),
-
-
                       ],
                     ),
                   ),
-
                   Container(
                     width: 150,
                     height: 300,
@@ -157,9 +147,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           onPressed: () async {
                             final result = await Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => NikkanKinoto(),
-                                )
-                            );
+                                MaterialPageRoute(
+                                  builder: (context) => NikkanKinoto(),
+                                ));
                             text = result;
                             print(text);
                           },
@@ -169,9 +159,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           onPressed: () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => NikkanHinoto(),
-                                )
-                            );
+                                MaterialPageRoute(
+                                  builder: (context) => NikkanHinoto(),
+                                ));
                           },
                         ),
                         RaisedButton(
@@ -179,9 +169,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           onPressed: () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => NikkanTsutinoto(),
-                                )
-                            );
+                                MaterialPageRoute(
+                                  builder: (context) => NikkanTsutinoto(),
+                                ));
                           },
                         ),
                         RaisedButton(
@@ -189,9 +179,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           onPressed: () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => NikkanKanoto(),
-                                )
-                            );
+                                MaterialPageRoute(
+                                  builder: (context) => NikkanKanoto(),
+                                ));
                           },
                         ),
                         RaisedButton(
@@ -199,25 +189,35 @@ class _MyHomePageState extends State<MyHomePage> {
                           onPressed: () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => NikkanMizunoto(),
-                                )
-                            );
+                                MaterialPageRoute(
+                                  builder: (context) => NikkanMizunoto(),
+                                ));
                           },
                         ),
-
-
                       ],
                     ),
                   ),
-
                 ],
               ),
             ),
-
+            RaisedButton(
+              child: Text('入力'),
+              onPressed: () async {
+                final result = await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => NikkanInput(),
+                    ));
+                text = result;
+                print(text);
+              },
+            ),
+            Container(
+              child: TextField(),
+            )
           ],
         ),
       ),
     );
   }
-
 }
