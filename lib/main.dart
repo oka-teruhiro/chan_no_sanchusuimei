@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('チャンの三柱推命　　Ver_1.2'),
+        title: Text('チャンの三柱推命　　Ver_2.1'),
       ),
       body: Center(
         child: Column(
@@ -201,7 +201,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             RaisedButton(
-              child: Text('入力'),
+              child: Text('生年月日を入力して日干を求める'),
               onPressed: () async {
                 final result = await Navigator.push(
                     context,
