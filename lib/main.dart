@@ -212,9 +212,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 print(text);
               },
             ),
-            Container(
-              child: TextField(),
-            )
           ],
         ),
       ),
