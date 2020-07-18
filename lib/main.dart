@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import 'nikka_tsutinoe.dart';
 import 'nikkan_hinoe.dart';
 import 'nikkan_hinoto.dart';
 import 'nikkan_input.dart';
@@ -12,6 +11,7 @@ import 'nikkan_kinoe.dart';
 import 'nikkan_kinoto.dart';
 import 'nikkan_mizunoe.dart';
 import 'nikkan_mizunoto.dart';
+import 'nikkan_tsutinoe.dart';
 import 'nikkan_tsutinoto.dart';
 
 void main() {
@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('チャンの三柱推命　　Ver_2.1'),
+        title: Text('チャンの三柱推命　　Ver_2.2'),
       ),
       body: Center(
         child: Column(
