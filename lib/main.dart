@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'nikkan_hinoe.dart';
 import 'nikkan_hinoto.dart';
@@ -13,6 +14,7 @@ import 'nikkan_mizunoe.dart';
 import 'nikkan_mizunoto.dart';
 import 'nikkan_tsutinoe.dart';
 import 'nikkan_tsutinoto.dart';
+import 'picker_demo_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,6 +24,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('en'),
+        const Locale('ja'),
+      ],
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -206,7 +217,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 final result = await Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => NikkanInput(),
+                      builder: (context) => PickerDemoPage(),
                     ));
                 text = result;
                 print(text);

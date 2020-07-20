@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'nikkan_kinoe.dart';
@@ -12,16 +11,13 @@ import 'nikkan_kanoto.dart';
 import 'nikkan_mizunoe.dart';
 import 'nikkan_mizunoto.dart';
 
-class NikkanInput extends StatelessWidget {
-  final myFocusNode = FocusNode();
-  final myController = TextEditingController();
-
+class PickerDemoPage extends StatelessWidget {
   String SeiNen = '1900';
   String SeiTuki = '1';
   String SeiHi = '1';
   DateTime Date0 = DateTime(1900, 1, 1);
   DateTime Date1 = DateTime(1900, 1, 1);
-  DateTime Date2 = DateTime(1900, 1, 1);
+  DateTime Date2;
   int seinen = 1957;
   int seituki = 3;
   int seihi = 31;
@@ -34,14 +30,15 @@ class NikkanInput extends StatelessWidget {
       appBar: AppBar(
         title: Text('生年月日を入力して下さい'),
       ),
-      body: Center(
-        child: Container(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              children: <Widget>[
-                //ここに年月日選択処理をいれる
-                RaisedButton(
+      body: Padding(
+        padding: const EdgeInsets.all(64.0),
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Image.asset('images/中トトロ.jpg'),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: RaisedButton(
                   child: Text('生年月日入力'),
                   onPressed: () async {
                     final Date2 = await showDatePicker(
@@ -52,42 +49,8 @@ class NikkanInput extends StatelessWidget {
                       initialDatePickerMode: DatePickerMode.year,
                       locale: const Locale('ja'),
                     );
-
                     print('$Date2');
 
-                    if (Date2 != null) {
-                      // do something
-                      print('$Date2');
-                    }
-                  },
-                ),
-
-                TextField(
-                    autofocus: true,
-                    decoration: InputDecoration(hintText: '年'),
-                    onChanged: (text) {
-                      SeiNen = text;
-                      print("$SeiNen");
-                    }),
-                TextField(
-                    decoration: InputDecoration(hintText: '月'),
-                    onChanged: (text) {
-                      SeiTuki = text;
-                      print("$SeiTuki");
-                    }),
-                TextField(
-                    decoration: InputDecoration(hintText: '日'),
-                    onChanged: (text) {
-                      SeiHi = text;
-                      print("$SeiHi");
-                    }),
-                RaisedButton(
-                  child: Text('入力完了'),
-                  onPressed: () {
-                    seinen = int.parse(SeiNen);
-                    seituki = int.parse(SeiTuki);
-                    seihi = int.parse(SeiHi);
-                    Date1 = DateTime(seinen, seituki, seihi);
                     nissuu = Date2.difference(Date0).inDays;
                     nikkan = nissuu % 10;
 
@@ -96,7 +59,6 @@ class NikkanInput extends StatelessWidget {
                     print('$Date2');
                     print('$nissuu');
                     print('$nikkan');
-
                     if (nikkan == 0) {
                       print('甲');
                       Navigator.push(
@@ -162,10 +124,24 @@ class NikkanInput extends StatelessWidget {
                             builder: (context) => NikkanMizunoto()),
                       );
                     }
+
+                    if (Date2 != null) {
+                      // do something
+                      print('$Date2');
+                    }
                   },
                 ),
-              ],
-            ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: RaisedButton(
+                  child: Text('戻る'),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+              ),
+            ],
           ),
         ),
       ),
