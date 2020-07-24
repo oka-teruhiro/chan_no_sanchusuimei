@@ -2,10 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutterapp5/jiko_syoukai.dart';
 
 import 'nikkan_hinoe.dart';
 import 'nikkan_hinoto.dart';
-import 'nikkan_input.dart';
 import 'nikkan_kanoe.dart';
 import 'nikkan_kanoto.dart';
 import 'nikkan_kinoe.dart';
@@ -66,16 +66,31 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('チャンの三柱推命　　Ver_2.2'),
+        title: Text('チャンの三柱推命　Ver_2.4'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.navigate_next),
+            tooltip: 'Next page',
+            onPressed: () async {
+              final result = await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => JikoSyoukai(),
+                  ));
+              text = result;
+              print(text);
+            },
+          ),
+        ],
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start, // <= 今回のターゲット
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Image.asset('images/チャン_1.jpg'),
             Padding(
               padding: const EdgeInsets.all(32.0),
-              child: Text('あなたの日干はなんですか？？'),
+              child: Text('あなたの日干はなんですか？'),
             ),
             Container(
               width: double.infinity,
