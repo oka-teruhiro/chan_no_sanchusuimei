@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutterapp5/jiko_syoukai.dart';
+import 'package:flutterapp5/nikkan_input1.dart';
 
 import 'nikkan_hinoe.dart';
 import 'nikkan_hinoto.dart';
@@ -66,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('チャンの三柱推命　Ver_2.4'),
+        title: Text('チャンの三柱推命　Ver_2.5'),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.navigate_next),
@@ -232,7 +233,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 final result = await Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => PickerDemoPage(),
+                      builder: (context) => NikkanInput1(),
                     ));
                 text = result;
                 print(text);
