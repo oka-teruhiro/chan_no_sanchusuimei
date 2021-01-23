@@ -34,3 +34,4 @@ AndroidStudio　の操作
 【ver_2.4】   2020.07.24  GITHubにアップしました。＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 不要なコード削除・プロフィール追加
 
+"# chan_no_shichusuimei" 
