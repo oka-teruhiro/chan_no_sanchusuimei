@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('チャンの三柱推命 v2.5'),
+        title: Text('チャンの三柱推命 v2.6'),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.navigate_next),
