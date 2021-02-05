@@ -21,7 +21,7 @@ class NikkanInput1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('生年月日を入力して下さい'),
+        title: Text('あなたの生年月日は？'),
       ),
       body: Center(
         child: Column(
@@ -44,10 +44,6 @@ class NikkanInput1 extends StatelessWidget {
                   nissuu = Date2.difference(Date0).inDays;
                   nikkan = nissuu % 10;
 
-                  //print('$Date0');
-                  //print('$Date2');
-                  //print('$nissuu');
-                  //print('$nikkan');
                   if (nikkan == 0) {
                     //print('甲');
                     Navigator.push(
@@ -111,10 +107,7 @@ class NikkanInput1 extends StatelessWidget {
                     );
                   }
 
-                  if (Date2 != null) {
-                    // do something
-                    //print('$Date2');
-                  }
+                  if (Date2 != null) {}
                 },
               ),
             ),
