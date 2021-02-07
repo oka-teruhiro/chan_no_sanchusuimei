@@ -42,3 +42,4 @@ AndroidStudio　の操作
 
 【ver_2.7】   2021.02.05  GITHubにアップしました。＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 不要dartファイル削除
+"# cha_no_sanchusuimei_v2" 
