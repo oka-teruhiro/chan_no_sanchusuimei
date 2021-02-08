@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "882240921889",
+    "project_id": "chan-no-sanchusuimei-v2",
+    "storage_bucket": "chan-no-sanchusuimei-v2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882240921889:android:6b1c861b9a2c21d6575e60",
+        "android_client_info": {
+          "package_name": "com.example.flutterapp5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882240921889-3kla9d40jsuladro0gnlb2vndns459nr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqzGqg7EC0wEjOqgmoz3J4z53E23vrG1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882240921889-3kla9d40jsuladro0gnlb2vndns459nr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "882240921889-3hpt59hc6gtsh9vsp63pen1h188s9m33.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.chan."
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
